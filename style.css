@@ -1,0 +1,748 @@
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  html, body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background: #b6d3eb;
+  }
+  
+  input.search {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: #053f75;
+    border-radius: 30px;
+    color: #ffffff !important;
+    font-size: 15px;
+    padding: 10px;
+  }
+  
+  .root {
+    width: 100%;
+  }
+  
+  .root .main-nav .left-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 60%;
+  }
+  
+  .root .main-nav .left-side .image {
+    width: 15%;
+  }
+  
+  .root .main-nav .left-side span {
+    width: 75%;
+    margin-left: 5%;
+  }
+  
+  .root .main-nav .left-side span form button {
+    color: #f1ba21;
+    border: 1px solid #ebdf43;
+  }
+  
+  .root .main-nav .left-side span form button:hover {
+    background: #f3f1f1;
+  }
+  
+  .root .main-nav .form-inline a {
+    color: #177e0e;
+    padding: 10px;
+    font-size: 15px;
+    max-width: 100%;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .root .wrapper {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .root .wrapper .left-wrapper {
+    max-width: 95%;
+  }
+  
+  .root .wrapper .left-wrapper .sponsored {
+    max-width: 100%;
+    margin-left: 70px;
+  }
+  
+  .root .wrapper .left-wrapper .sponsored .card {
+    display: inline-block;
+    margin: 3%;
+    height: 300px;
+  }
+  
+  .root .wrapper .left-wrapper .sponsored .card img {
+    max-height: 150px;
+    max-width: 100%;
+    border-bottom: 2px solid #f3f1f1;
+  }
+  
+  .root .wrapper .left-wrapper .sponsored .card .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .root .wrapper .left-wrapper .sponsored .card .footer a {
+    height: 35px;
+    font-size: 14px;
+    font-family: Optima;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .root .wrapper .left-wrapper .sponsored .card .footer p {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  
+  .root .wrapper .left-wrapper .sponsored .card .footer .btn {
+    background: #c8f306;
+    border: none;
+  }
+  
+  .root .wrapper .left-wrapper .job-offer {
+    margin: 20px;
+    max-height: 2000px;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .card-image {
+    max-width: 20%;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .card-content {
+    max-width: 70%;
+    margin-left: 20px;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .card-content .card-text {
+    max-width: 100%;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .card-content h5 {
+    font-weight: bold;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .card-content p {
+    max-height: 45px;
+    overflow: hidden;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .card-content h5, .root .wrapper .left-wrapper .jobs .content .card-content p {
+    margin: 0px;
+    font-size: 15px;
+    font-family: Optima;
+    color: #000000;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .button {
+    max-width: 8%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+    width: 10%;
+    position: absolute;
+    right: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  .root .wrapper .left-wrapper .jobs .content .button .btn {
+    width: 100%;
+    font-size: 15px;
+    font-family: Optima;
+    color: #ffffff;
+    background: #4dc741;
+    border: none;
+    margin-top: 30px;
+  }
+  
+  .root .wrapper .right-wrapper {
+    max-width: 15%;
+  }
+  
+  /*
+  
+  
+  
+  
+  
+  
+  
+  
+  */
+  html, body, .root-login, .root-signup {
+    height: 100%;
+  }
+  
+  .root-login, .login, .root-signup, .signup-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .add-ad {
+    max-width: 230px;
+    background: #ffffff;
+    border-radius: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 30px;
+  }
+  
+  .add-ad a {
+    color: #f18509;
+    font-weight: bold;
+  }
+  
+  .login, .signup-wrapper {
+    border: 1px solid #f3f1f1;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90%;
+    height: 60%;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+  }
+  
+  .header h1 {
+    font-size: 35px;
+    font-family: Optima;
+    color: #327e07;
+  }
+  
+  .form label {
+    font-size: 20px;
+    font-family: Optima;
+    color: #000000;
+  }
+  
+  .input {
+    margin: 15px;
+  }
+  
+  .form input, select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #E8F0FE;
+  }
+  
+  .login-btn, .signup-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .login-btn button, .signup-btn button {
+    background: #7e7317;
+    border-radius: 16px;
+    max-width: 50%;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-family: Optima;
+    color: #ffffff;
+  }
+  
+  .signup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .signup p {
+    font-size: 16px;
+    font-family: Optima;
+    color: #000000;
+  }
+  
+  .signup a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Optima;
+    color: #527403;
+    font-weight: bold;
+  }
+  
+  .signup-wrapper {
+    max-height: 90%;
+    height: 85%;
+  }
+  
+  .signup-wrapper h1 {
+    font-size: 35px;
+  }
+  
+  .signup-wrapper .input, .signup-wrapper select {
+    margin: 5px;
+  }
+  
+  .signup-wrapper .signup-btn {
+    margin-top: 10px;
+  }
+  
+  .signup-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 14px 20px;
+    margin: 8px 0;
+  }
+  
+  .main-header {
+    margin: 30px;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  
+  .main-header .ads {
+    max-width: 30%;
+    width: 30%;
+    margin-left: 55px;
+  }
+  
+  .main-header .ads img {
+    width: 291px;
+    height: 196px;
+  }
+  
+  .main-header .job-offer {
+    max-width: 75%;
+    width: 75%;
+  }
+  
+  .main-header span {
+    margin: 1%;
+  }
+  
+  .main-header .content {
+    max-width: 75%;
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  
+  .main-header .card-image {
+    max-width: 60%;
+  }
+  
+  .main-header .card-image img {
+    width: 291px;
+    height: 146px;
+  }
+  
+  .main-header .card-content {
+    max-width: 68%;
+    width: 68%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 15px;
+  }
+  
+  .main-header .card-content h5, .main-header .card-content p {
+    font-family: Optima;
+  }
+  
+  .main-header .button {
+    max-width: 19%;
+  }
+  
+  .main-header .button .btn {
+    font-size: 13px;
+    font-family: Optima;
+    color: #ffffff;
+    background: #1c6b04;
+    border: none;
+    border-radius: 15px;
+    position: absolute;
+    right: 40px;
+    margin: 30px 0px;
+  }
+  
+  .job-desc, .job-req {
+    max-width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 1px solid #f3f1f1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3%;
+    background: #ffffff;
+    margin: 30px;
+    border-radius: 15px;
+  }
+  
+  .job-details {
+    max-width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border: 1px solid #f3f1f1;
+    padding: 3%;
+    background: #ffffff;
+    margin: 30px;
+    border-radius: 15px;
+  }
+  
+  .details-job {
+    margin-left: 20%;
+  }
+  
+  .job-form-content {
+    max-width: 98%;
+    max-height: 98%;
+    background: #ffffff;
+  }
+  
+  .job-form-content .job-form-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .job-form-content .job-form-header h1 {
+    margin-top: 30px;
+    font-size: 50px;
+    font-family: Optima;
+    color: #926607;
+    font-weight: bold;
+  }
+  
+  .job-form-content .job-form-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 15px;
+    font-family: Optima;
+    color: #000000;
+  }
+  
+  .job-form-content .job-form-input input, .job-form-content .job-form-input select {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #E8F0FE;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 99%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-top .left-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 50%;
+    width: 30%;
+    margin-left: 15%;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-top .right-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 45%;
+    width: 30%;
+    margin-right: 15%;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-top .right-content select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-top .right-content .sponsored {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-top .right-content .sponsored p {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-bottom label {
+    font-size: 14px;
+    font-family: Optima;
+    color: #000000;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-bottom .desc {
+    margin-left: 16%;
+    max-width: 100%;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-bottom .requir {
+    margin-right: 16%;
+    max-width: 100%;
+  }
+  
+  .job-form-content .job-form-input .job-form-input-bottom textarea {
+    background: #E8F0FE;
+    border: none;
+    height: 50px;
+    border-radius: 4px;
+    color: #888888;
+    padding: 8px;
+    width: 365px;
+  }
+  
+  .job-form-content .job-form-input .add-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .job-form-content .job-form-input .add-button input {
+    width: 120px;
+    font-size: 17px;
+    font-family: Optima;
+    color: #ffffff;
+    background: #705405;
+    border-radius: 25px;
+  }
+  
+  .box {
+    background: #ffffff;
+    margin: 40px;
+    max-width: 93%;
+  }
+  
+  .box th {
+    color: #fcd112;
+    font-weight: bold;
+  }
+  
+  .box a {
+    color: #d1ab03;
+  }
+  
+  .update-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .update-input input {
+    max-width: 40%;
+    width: 130px;
+    font-size: 16px;
+    font-family: Optima;
+    color: #ffffff;
+    background: #5e5701;
+    border: none;
+    border-radius: 20px;
+    margin: 30px 0px;
+  }
+  
+  .category-form input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px;
+  }
+  
+  .category {
+    max-width: 30%;
+    width: 30%;
+    max-height: 30%;
+    height: 40px;
+    padding: 20px;
+  }
+  
+  .submit {
+    background: #33791e;
+    font-size: 16px;
+    font-family: Optima;
+    color: #ffffff;
+    max-width: 100%;
+    width: 5%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 30px;
+  }

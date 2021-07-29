@@ -1,0 +1,646 @@
+$mainColor: #3a5f0a;
+$colorWhite: #ffffff;
+$colorGray: #f3f1f1;
+$fontSego: Optima;
+
+//this function for display elements.
+@mixin flexDisplay($display, $flex-direction) {
+	display: $display;
+	flex-direction: $flex-direction;
+}
+
+//this function also for display elements but with different parameter.
+@mixin flexDisplayContent($display, $justify-content) {
+	display: $display;
+	justify-content: $justify-content;
+}
+
+//this function give the style for the text.
+@mixin textStyle($font-size, $font-family, $color) {
+	font-size: $font-size;
+	font-family: $font-family;
+	color: $color;
+}
+//this function give the width and the height for the elements.
+@mixin position($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+
+
+
+
+//style for index.php
+* {
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+html, body {
+	margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background: #f3f0f0;
+}
+
+input.search {
+  appearance: none;
+  background: $mainColor;
+  border-radius: 30px;
+  color: $colorWhite !important;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.root {
+  width: 100%;
+  
+
+  .main-nav {
+    
+    .left-side {
+      @include flexDisplay(flex, row);
+      align-items: center;
+      width: 60%;
+
+      .image {
+        width: 15%;
+      }
+
+      span {
+        width: 75%;
+        margin-left: 5%;
+
+        form button {
+          color: $mainColor;
+          border: 1px solid $mainColor;
+        }
+       form button:hover {
+          background: $colorGray;
+        }
+      }
+    }
+    
+  
+
+    .form-inline a {
+      color: $mainColor;
+      padding: 10px;
+      font-size: 15px;
+      max-width: 100%;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+  }
+
+  
+  .wrapper {
+    max-width: 100%;
+    @include flexDisplay(flex, row);
+    justify-content: space-between;
+
+    .left-wrapper {
+      max-width: 95%;
+
+      .sponsored {
+        max-width: 100%;
+        margin-left: 70px;
+
+        .card{
+          display: inline-block;
+          margin: 3%;
+          height: 300px;
+
+          img {
+            max-height: 150px;
+            max-width: 100%;
+            border-bottom: 2px solid $colorGray;
+
+          }
+
+          .footer {
+            @include flexDisplay(flex, row);
+            justify-content: space-between;
+            align-items: center;
+
+            a{
+              height: 35px;
+              @include textStyle(14px, $fontSego, $colorWhite);
+              font-weight: bold;
+            } 
+
+            p {
+              font-size: 10px; 
+              margin-top: 20px;
+            }
+
+            .btn {
+              background: $mainColor;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .job-offer {
+        margin: 20px;
+        max-height: 2000px;
+      }
+
+      .jobs {
+        
+        .content{
+          width: 100%;
+          @include flexDisplay(flex, row);
+  
+          .card-image{
+            max-width: 20%;
+
+            img{
+              max-width: 100%;
+              max-height: 100%;
+              width: 300px;
+              @include flexDisplayContent(flex, center);
+            }
+          }
+          
+          .card-content {
+            max-width: 70%;
+            margin-left: 20px;
+
+            .card-text {
+              max-width: 100%;
+            }
+
+            h5 {
+              font-weight: bold;
+            }
+
+            p {
+              max-height: 45px;
+              overflow: hidden;
+            }
+
+            h5, p {
+              margin: 0px;
+               @include textStyle(15px, $fontSego, #000000);
+            }
+          }
+          .button {
+            max-width: 8%;
+            align-items: center;
+            margin-top: 10px;
+            width: 10%;
+            position: absolute;
+            right: 10px;
+            @include flexDisplayContent(flex, space-between);
+            flex-direction: column;
+            
+            .btn  {
+              width: 100%;
+              @include textStyle(15px, $fontSego, $colorWhite);
+              background: $mainColor;
+              border: none;
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+
+    }
+
+    .right-wrapper {
+      max-width: 15%;
+    }
+
+  }
+}
+
+/*
+
+
+
+
+
+
+
+
+*/
+//style for login page
+
+html, body, .root-login, .root-signup {
+  height: 100%;
+}
+
+.root-login, .login, .root-signup, .signup-wrapper {
+  @include flexDisplayContent(flex, center);
+  flex-direction: column;
+  align-items: center
+}
+
+.add-ad {
+  max-width: 230px;
+  background: $colorWhite;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+
+  a {
+    color: $mainColor;
+    font-weight: bold;
+  }
+}
+.login, .signup-wrapper {
+  border: 1px solid $colorGray;
+  width: 90%;
+  max-width: 450px;
+  max-height: 90%;
+  height: 60%;
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+}
+
+.header h1 {
+  @include textStyle(35px, $fontSego, $mainColor);
+  // margin-bottom: 30px;
+}
+
+.form label {
+  @include textStyle(20px, $fontSego, #000000);
+}
+
+.input {
+  margin: 15px;
+}
+
+.form input, select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #E8F0FE;
+}
+
+.login-btn, .signup-btn {
+  @include flexDisplayContent(flex, center);
+  
+  button {
+    background: $mainColor;
+    border-radius: 16px;
+    max-width: 50%;
+    width: 100px;
+    height: 30px;
+    @include textStyle(16px, $fontSego, $colorWhite);
+  }
+}
+
+.signup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  p {
+    @include textStyle(16px, $fontSego, #000000);
+  }
+  a {
+    padding: 10px;
+    text-decoration: none;
+    @include textStyle(16px, $fontSego, $mainColor);
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+//style for sign up page
+.signup-wrapper {
+  max-height: 90%;
+  height: 85%;
+
+  h1 {
+    font-size: 35px;
+  }
+  .input, select {
+    margin: 5px;
+  }
+
+  .signup-btn {
+    margin-top: 10px;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 14px 20px;
+    margin: 8px 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+//style for details page
+.main-header {
+  margin: 30px;
+  max-width: 100%;
+  @include flexDisplay(flex, row);
+  
+  .ads {
+    max-width: 30%;
+    width: 30%;
+    margin-left: 55px;
+
+    img {
+      width: 291px;
+      height: 196px;
+    }
+  }
+
+  .job-offer {
+    max-width: 75%;
+    width: 75%;
+  }
+  span {
+    margin: 1%;
+  }
+  .content {
+    max-width: 75%;
+    width: 70%;
+    @include flexDisplay(flex, row);
+  }  
+
+  .card-image {
+    max-width: 60%;
+    
+    img {
+      width: 291px;
+      height: 146px;
+    }
+  }
+
+  .card-content {
+    max-width: 68%;
+    width:  68%;
+    @include flexDisplay(flex, row);
+    justify-content: space-between;
+    margin: 15px;
+
+    h5, p {
+      font-family: $fontSego;
+    } 
+  }
+
+  .button {
+    max-width: 19%;
+
+    .btn {
+      @include textStyle(13px, $fontSego, $colorWhite);
+      background: $mainColor;
+      border: none;
+      border-radius: 15px;
+      position: absolute;
+      right: 40px;
+      margin: 30px 0px;
+    }
+  }
+}
+
+.job-desc, .job-req {
+  max-width: 80%;
+  @include flexDisplay(flex, column);
+  border: 1px solid $colorGray;
+  align-items: center;
+  padding: 3%;
+  background: $colorWhite;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.job-details {
+  max-width: 80%;
+  @include flexDisplay(flex, row);
+  border: 1px solid $colorGray;
+  padding: 3%;
+  background: $colorWhite;
+  margin: 30px;
+  border-radius: 15px;
+}
+.details-job {
+  margin-left: 20%;
+}
+
+
+
+
+
+
+
+//style for add offer job page
+.job-form-content {
+  max-width: 98%;
+  max-height: 98%;
+  background: $colorWhite;
+
+  .job-form-header {
+    @include flexDisplayContent(flex, center);
+
+    h1 {
+      margin-top: 30px;
+      @include textStyle(50px, $fontSego, $mainColor);
+      font-weight: bold;
+    }
+  }
+
+  .job-form-input {
+    @include flexDisplay(flex, column);
+    @include textStyle(15px, $fontSego, #000000);
+
+    input, select {
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #E8F0FE;
+    }
+
+    .job-form-input-top {
+      @include flexDisplay(flex, row);
+      max-width: 99%;
+      justify-content: space-between;
+      margin: 20px;
+
+      .left-content {
+        @include flexDisplay(flex, column);
+        max-width: 50%;
+        width: 30%;
+        margin-left: 15%;
+      }
+
+      .right-content {
+        @include flexDisplay(flex, column);
+        max-width: 45%;
+        width: 30%;
+        margin-right: 15%;
+
+        select {
+          appearance: none;
+        }
+
+        .sponsored {
+          @include flexDisplay(flex, row);
+          
+          p {
+            margin-top: 5px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .job-form-input-bottom {
+      @include flexDisplay(flex, row);
+      justify-content: space-between;
+
+      label {
+        @include textStyle(14px, $fontSego, #000000);
+      }
+
+      .desc {
+        margin-left: 16%;
+        max-width: 100%;
+      }
+
+      .requir {
+        margin-right: 16%;
+        max-width: 100%;
+      }
+
+      textarea {
+        background: #E8F0FE;
+        border: none;
+        height: 50px;
+        border-radius: 4px;
+        color: #888888;
+        padding: 8px;
+        width: 365px;
+      }
+
+    }
+
+    .add-button {
+      @include flexDisplayContent(flex, center);
+
+      input {
+        width: 120px;
+        @include textStyle(17px, $fontSego, #ffffff);
+        background: $mainColor;
+        border-radius: 25px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+//style for announcements page 
+.box {
+  background: #ffffff;
+  margin: 40px;
+  max-width: 93%;;
+
+  th {
+    color: $mainColor;
+    font-weight: bold;
+  }
+
+  a {
+    color: #d1ab03;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+//style for update page 
+.update-input {
+  display: flex;
+  justify-content: center;
+}
+.update-input input{
+  max-width: 40%;
+  width: 130px;
+  @include textStyle(16px, $fontSego, $colorWhite);
+  background: $mainColor;
+  border: none;
+  border-radius: 20px;
+  margin: 30px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+//style for add category page.
+.category-form input {
+  @include flexDisplay(flex, column);
+  margin: 20px;
+}
+
+.category {
+  max-width: 30%;
+  width: 30%;
+  max-height: 30%;
+  height: 40px;
+  padding: 20px;
+}
+
+.submit {
+  background: $mainColor;
+  @include textStyle(16px, $fontSego, $colorWhite);
+  max-width: 100%;
+  width: 5%;
+  align-items: center;
+  border-radius: 30px;
+}
